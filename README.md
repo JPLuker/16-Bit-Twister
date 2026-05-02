@@ -5,6 +5,7 @@
 
 > 🍴 Forked from [8-Bit Twister](https://github.com/segaboy/8-Bit-Twister) by segaboy. This fork expands system support beyond NES.
 
+![16-Bit Twister gameplay screenshot](assets/screenshot.png)
 ---
 
 ## Why it's awesome
