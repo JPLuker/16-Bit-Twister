@@ -62,7 +62,8 @@ No tooling needed. Just open `index.html`, or serve the folder for best drag-and
 
 ## Credits
 
-* Emulator: **JSNES** (JavaScript NES emulator)
+* NES Emulator: **JSNES** (JavaScript NES emulator)
+* GB/GBC Core: GameBoy-Online (by Grant Galitz)
 * Original concept & implementation: **segaboy** ([8-Bit Twister](https://github.com/segaboy/8-Bit-Twister))
 * "16-Bit Twister" Fork & expansion: **JPLuker**
 
