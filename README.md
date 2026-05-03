@@ -53,14 +53,15 @@ No tooling needed. Just open `index.html`, or serve the folder for best drag-and
 |--------|--------|
 | NES | ✅ Done |
 | Game Boy / Game Boy Color | ✅ Done |
-| Super Nintendo (SNES) | 🚧 In progress |
+| Super Nintendo (SNES) | ❌ Not feasible |
 | Game Boy Advance | 🚧 In progress |
 | Sega Master System | 🔜 Planned |
 | Sega Game Gear | 🔜 Planned |
 | Sega Genesis | 🔜 Planned |
 | Shared System | 💭 Under consideration |
 | RomM Support | 💭 Under consideration |
-
+> **Note:** SNES support is not currently feasible due to browser-based 
+> emulator limitations.
 ---
 
 ## Credits
