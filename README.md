@@ -58,6 +58,8 @@ No tooling needed. Just open `index.html`, or serve the folder for best drag-and
 | Sega Master System | 🔜 Planned |
 | Sega Game Gear | 🔜 Planned |
 | Sega Genesis | 🔜 Planned |
+| Shared System | 🔜 Planned |
+| RomM Support | 💭 Under consideration |
 
 ---
 
