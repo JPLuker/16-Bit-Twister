@@ -2,17 +2,18 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>8-Bit Twister — 2-Player Keyboard Chaos</title>
+  <title>16-Bit Twister — 2-Player Keyboard Chaos</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div>
-      <h1>8-Bit Twister</h1>
-      <div class="hint">Drag a single <b>.nes</b> ROM into the dropzone on the bottom left. The ROM will start at the same time on each viewport. Each match randomizes keybinds.</div>
+      <h1>16-Bit Twister</h1>
+      <div class="hint">Drop a ROM into the dropzone — supports NES, Game Boy, Game Boy Color &amp; more to come. Same ROM runs on both viewports simultaneously. Each match randomizes keybinds.</div>
     </div>
     <div class="controls">
+      <span class="badge" id="system-badge">No ROM loaded</span>
       <button id="randomize">🎲 New Keybinds</button>
       <button id="start">▶ Start Match</button>
       <button id="stop">⏹ Stop</button>
@@ -23,7 +24,7 @@
     <section class="col p1">
       <div class="title-row">
         <h2>Player 1 <span class="badge">Left station</span></h2>
-        <div class="badge">NES A/B + D‑Pad + Start/Select</div>
+        <div class="badge">D-Pad + Buttons + Start/Select</div>
       </div>
       <div class="canvaswrap"><canvas id="screen1" width="256" height="240"></canvas></div>
       <div class="audio">
@@ -47,7 +48,7 @@
     </section>
 
   <div class="footer">
-    <div class="dropzone">💾 Drop a <b>.nes</b> file here to load both instances.</div>
+    <div class="dropzone">💾 Drop a ROM — <b>.nes .gb .gbc </b></div>
 
     <div class="footer-right">
       <div class="row">
@@ -62,10 +63,10 @@
       </div>
 
       <div class="credits">
-        <span>By Dean Howell</span>
+        <span>Based on "8-Bit Twister" By Dean Howell, forked by Joseph Luker </span>
 
         <!-- TODO: replace href with your actual GitHub repo URL -->
-        <a class="icon" href="https://github.com/segaboy/8-Bit-Twister" target="_blank" rel="noopener" aria-label="GitHub repository">
+        <a class="icon" href="https://github.com/JPLuker/16-Bit-Twister" target="_blank" rel="noopener" aria-label="GitHub repository">
           <!-- GitHub mark -->
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .4 8.9a11.5 11.5 0 0 0 7.9 14.2c.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 3 1.3 3.8 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.1s1-.3 3.2 1.2a11.2 11.2 0 0 1 5.8 0C16.6 2.9 17.6 3.2 17.6 3.2a4.3 4.3 0 0 1 .1 3.1 4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.8 5.7-5.5 6 .4.3.8 1 .8 2.1v3.1c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.6 9 11.5 11.5 0 0 0 12 .5z"/></svg>
         </a>
@@ -80,7 +81,19 @@
   </div>
 
 
-  <!-- JSNES from CDN (no local jsnes.min.js needed) -->
+  <!-- Results overlay -->
+  <div id="results" class="overlay">
+    <div class="modal">
+      <h2 style="margin:0 0 8px">Time's up!</h2>
+      <p style="margin:0 0 16px;color:var(--muted)">Who won? Settle it, then play again.</p>
+      <div class="row">
+        <button id="newRound">🎲 New Round</button>
+        <button id="close">✕ Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JSNES from CDN -->
   <script src="https://unpkg.com/jsnes/dist/jsnes.min.js"></script>
   <script src="main.js"></script>
 </body>
